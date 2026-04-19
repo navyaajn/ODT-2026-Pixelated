@@ -58,14 +58,14 @@ By the final review, this README should clearly show:
 
 | Name | Primary Role | Secondary Role | Strengths Brought to the Project |
 |---|---|---|---|
-| `[Student 1]` | `[Electronics / Coding / App / Fabrication / Mechanics]` | `[Role]` | `[Write here]` |
-| `[Student 2]` | `[Electronics / Coding / App / Fabrication / Mechanics]` | `[Role]` | `[Write here]` |
+| Navyaa Jain | Fabrication/ Debugging | Technical Support| Hands-on building, soldering, assembly, troubleshooting hardware issues, identifying faults during integration, system integration |
+| Visruta Verma | Electronics / Coding / Coding / App / Fabrication / Mechanics]` | Aesthetics | Circuit design, ESP32 programming, visual design decisions, translating concept into interactive output |
 
 ## 1.3 Project Title
 `[Enter the title of your project]`
 
 ## 1.4 One-Line Pitch
-`[Describe your project in one sentence]`
+A dynamic LED wall that detects movement and lights up in real time, turning simple gestures into an engaging visual experience.
 
 ## 1.5 Expanded Project Idea
 In 1–2 paragraphs, explain:
@@ -75,7 +75,9 @@ In 1–2 paragraphs, explain:
 - what technologies are involved.
 
 **Response:**  
-`[Write here]`
+`This project is an interactive LED wall made using NeoPixel strips, an ultrasonic sensor, and a servo motor. The sensor scans horizontally by rotating on a servo and detects the position of a person or object in front of the wall. Based on this detection, corresponding sections of the LED strips light up, creating a direct visual response to movement. The installation is designed to be quick to engage with—people can simply walk by or wave their hand and immediately see the wall react.
+
+The experience is playful and intriguing because it invites curiosity without demanding time or instructions. The moving sensor creates a sense of anticipation, and the real-time lighting response feels almost like the wall is “watching” or “tracking” you. Variations in lighting based on distance add a dynamic, almost disco-like effect, making it visually satisfying. The project combines hardware and software elements including an ESP32 microcontroller, NeoPixel LED strips, ultrasonic sensing, servo control, and power regulation using a buck converter.
 
 ---
 
@@ -101,7 +103,9 @@ Answer the following:
 - Why would someone want to try it again?
 
 **Response:**  
-`[Write here]`
+- The experience is an interactive wall that responds to movement in real time. As a person walks past or waves their hand, a scanning sensor detects their position and lights up corresponding sections of LED strips, creating a dynamic visual trail that follows them.
+- Curiosity first—because the wall appears to “notice” them. Then surprise and delight when their movement directly affects the lights. It should feel playful, slightly mysterious, and satisfying to control without needing instructions.'
+- Because the output changes based on how they move. Users can experiment—move faster, slower, closer, farther—and see different lighting patterns. This variability, combined with the instant feedback, makes it engaging and replayable.
 
 ## 2.3 Design Persona
 Complete the sentence below:
@@ -109,7 +113,7 @@ Complete the sentence below:
 > We are designing this project as if we are a small creative studio making a **[toy / game / playable object / interactive experience]** for **[children / teens / adults / classmates / exhibition visitors / mixed audience]**.
 
 **Response:**  
-`[Write here]`
+We are designing this project as if we are a small creative studio making a interactive experience for a mixed audience of classmates and exhibition visitors.
 
 ---
 
@@ -120,9 +124,8 @@ List what inspired the project.
 
 | Source Type | Title / Link | What Inspired You |
 |---|---|---|
-| `[Toy / Board game / App / Video / Website / Object]` | `[Link or title]` | `[What did you learn or borrow?]` |
-| `[Toy / Board game / App / Video / Website / Object]` | `[Link or title]` | `[What did you learn or borrow?]` |
-| `[Toy / Board game / App / Video / Website / Object]` | `[Link or title]` | `[What did you learn or borrow?]` |
+| Video / Interactive Installation | https://pin.it/6xYyJaCZk | The idea of a responsive light wall that reacts to human presence and creates an immediate visual connection |
+| Video / Interactive Installation | (https://pin.it/6xYyJaCZk) | The scanning or tracking behaviour and how simple movement can be translated into engaging light patterns |
 
 ## 3.2 Original Twist
 What makes your project original?
