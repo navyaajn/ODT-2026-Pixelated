@@ -266,7 +266,9 @@ There is no app interaction; the system works as a standalone installation.
 Add an early sketch of the full idea.
 
 **Insert image below:**  
-`[Upload image and link here]`
+<img width="718" height="1280" alt="image" src="https://github.com/user-attachments/assets/a7e2f53f-be3a-426b-8e95-7ce8cb4622e8" />
+<img width="750" height="1280" alt="image" src="https://github.com/user-attachments/assets/d6fc76b1-9955-4ccf-b8fc-ec2c70f358b9" />
+
 
 Example:
 ```md
