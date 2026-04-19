@@ -249,10 +249,14 @@ There is no app interaction; the system works as a standalone installation.
 
 | System Part | Type | What It Does |
 |---|---|---|
-|Ultrasonic Sensor | Input | Detects distance and position of objects as it scans across the wall |
-| ESP32 | Processing |Reads sensor and button inputs, maps position, and controls LED output and servo movement |
-|NeoPixel LED Strips | Output | Lights up corresponding sections and displays animations based on input |
-| `[Mechanical Assembly]` | Physical Action | `[Describe]` |
+- |Ultrasonic Sensor | Input | Detects distance and position of objects as it scans across the wall |
+- |Push Buttons | Input | Triggers different animated pixel art patterns when pressed |'
+- |Voltage Divider (Resistors) |Input Conditioning |Reduces echo pin voltage from the ultrasonic sensor to a safe level for the ESP32
+- |ESP32 | Processing |Reads sensor and button inputs, maps position, and controls LED output and servo movement |
+- |NeoPixel LED Strips | Output | Lights up corresponding sections and displays animations based on input |
+- |Servo Motor | Output | Rotates the ultrasonic sensor left to right for continuous scanning |'
+- |LM2596 Buck Regulator | Power Management | Steps down voltage from the power adapter to safely supply required voltage to LEDs     and components
+- 
 
 ---
 
