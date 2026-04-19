@@ -131,7 +131,9 @@ List what inspired the project.
 What makes your project original?
 
 **Response:**  
-`[Write here]`
+Unlike typical LED walls that use cameras or fixed sensors, this project uses a single ultrasonic sensor mounted on a moving servo to scan space horizontally. This creates a more visible and mechanical interaction where users can actually see how the system is “searching” for them. The simplicity of using one moving sensor instead of multiple static inputs makes the interaction feel more intentional and slightly unexpected.
+
+Additionally, the project focuses on quick engagement. It does not require instructions, controllers, or long interaction time. People can just walk by and instantly become part of the experience. The variation in lighting based on distance and position adds a dynamic, almost rhythmic visual effect, making it both interactive and visually appealing.
 
 ---
 
@@ -147,37 +149,34 @@ Examples:
 - move object → sensor detects → sound/light response → player reacts
 
 **Response:**  
-`[Write here]`
+move in front of wall → sensor scans and detects position → corresponding LEDs light up → user changes movement → lights respond → press button → animated pixel art appears → interaction continues → repeat 
 
 ## 4.2 Intended Player / Audience
 
 | Question | Response |
 |---|---|
-| Who is this for? | `[Write here]` |
-| Age range | `[Write here]` |
-| Solo or multiplayer | `[Write here]` |
-| Expected duration of one round | `[Write here]` |
-| What should the player feel? | `[Write here]` |
-| Is explanation required before use? | `[Write here]` |
+| Who is this for? |Classmates, exhibition visitors, and anyone passing by the installation|
+| Age range | 5+  |
+| Solo or multiplayer | Both, one or multiple people can interact at the same time  |
+| Expected duration of one round | 10–30 seconds, short and repeatable interactions |
+| What should the player feel? | Curious, engaged, and entertained by the instant visual response |
+| Is explanation required before use? | No, interaction is intuitive and can be understood by just observing |
 
 ## 4.3 Player Journey
 Describe exactly how a player will use the project.
 
-1. **Approach:** `[How does the player first encounter it?]`
-2. **Start:** `[How do they begin?]`
-3. **First Action:** `[What do they do first?]`
-4. **Main Interaction:** `[What keeps happening during use?]`
-5. **System Response:** `[How does the project respond?]`
-6. **Win / Lose / End Condition:** `[How does one round end?]`
-7. **Reset:** `[How does the next round begin?]`
+1. **Approach:** The player notices a wall with moving lights and a scanning sensor, which draws their attention.
+2. **Start:** There is no formal start, the interaction begins as soon as they come near the wall.
+3. **First Action:** The player moves their hand or body in front of the wall or presses one of the buttons.
+4. **Main Interaction:** The player keeps moving to see how the lights follow them, or presses buttons to trigger different animated pixel visuals.
+5. **System Response:** The sensor detects position and lights up corresponding LED sections, while button presses trigger animated pixel art on the wall.
+6. **Win / Lose / End Condition:** There is no win or lose, the interaction naturally ends when the player walks away.
+7. **Reset:** The system automatically resets when no movement is detected, ready for the next user.
 
 ## 4.4 Rules of Play
 If your project is a game, list the rules clearly.
 
-- `[Rule 1]`
-- `[Rule 2]`
-- `[Rule 3]`
-- `[Rule 4]`
+- `[Rule 1]`NA
 
 ---
 
@@ -186,24 +185,24 @@ If your project is a game, list the rules clearly.
 ## 5.1 Definition of “Playable”
 Your project will be considered complete only if these conditions are met.
 
-- [ ] `[Condition 1]`
-- [ ] `[Condition 2]`
-- [ ] `[Condition 3]`
-- [ ] `[Condition 4]`
-- [ ] `[Condition 5]`
+- [ ] Ultrasonic sensor correctly detects movement and position across the scanning range
+- [ ] Servo motor smoothly scans left to right without failure
+- [ ]  LED strips light up accurately based on detected position
+- [ ] System runs continuously without random flickering or power issues
+- [ ] Interaction is immediate and responsive without noticeable delay
 
 ## 5.2 Minimum Viable Version
 What is the smallest version of this project that still delivers the core experience?
 
 **Response:**  
-`[Write here]`
+A small setup with 2–3 NeoPixel strips, one ultrasonic sensor mounted on a servo, and an ESP32 where movement is detected and corresponding LEDs light up. This version proves the core idea of motion-based light response.
 
 ## 5.3 Stretch Features
 What features are nice to have but not essential?
 
-- `[Stretch feature 1]`
-- `[Stretch feature 2]`
-- `[Stretch feature 3]`
+- button-triggered animated pixel art modes
+- Increasing number of LED strips for a larger and more detailed wall
+- More complex lighting patterns based on speed and distance of movement
 
 ---
 
@@ -212,17 +211,17 @@ What features are nice to have but not essential?
 ## 6.1 Project Type
 Check all that apply.
 
-- [ ] Electronics-based
-- [ ] Mechanical
-- [ ] Sensor-based
+- [✅ ] Electronics-based
+- [✅] Mechanical
+- [✅] Sensor-based
 - [ ] App-connected
-- [ ] Motorized
+- [✅ ] Motorized
 - [ ] Sound-based
-- [ ] Light-based
+- [✅ ] Light-based
 - [ ] Screen/UI-based
-- [ ] Fabricated structure
+- [✅ ] Fabricated structure
 - [ ] Game logic based
-- [ ] Installation / tabletop experience
+- [✅ ] Installation / tabletop experience
 - [ ] Other: `[Write here]`
 
 ## 6.2 High-Level System Description
