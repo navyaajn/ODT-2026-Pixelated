@@ -704,25 +704,34 @@ The biggest uncertainty is power stability. There is a risk that components may 
 
 | Question | How You Will Check |
 |---|---|
-| Do players understand what to do? | `[Method]` |
-| Is the interaction satisfying? | `[Method]` |
-| Do players want another turn? | `[Method]` |
-| Is the challenge balanced? | `[Method]` |
-| Is the response clear and immediate? | `[Method]` |
+| Do players understand what to do? |Observe first-time users and see if they start interacting without instructions |
+| Is the interaction satisfying? | Ask users for quick feedback and watch their reactions while using it |
+| Do players want another turn? |See if users repeat the interaction or call others to try it |
+| Is the challenge balanced? | NA |
+| Is the response clear and immediate? | Observe if users notice instant LED response to their movement without confusion |
 
 ## 16.3 Testing and Debugging Log
 
 | Date | Problem Found | Type | What You Tried | Result | Next Action |
 |---|---|---|---|---|---|
-| `[Date]` | `[Describe issue]` | `[Technical / Mechanical / UI / Gameplay]` | `[What you did]` | `[Worked / Partly / Failed]` | `[Next step]` |
-| `[Date]` | `[Describe issue]` | `[Type]` | `[What you did]` | `[Result]` | `[Next step]` |
+|13TH APRIL | Servo motors were not working properly due to frayed parts |Technical | Replaced with new servo motors | Worked | Continue testing with new components |
+| 13 April | Ultrasonic sensor not giving readings when powered from breadboard | Technical | Tried different power sources, then used ESP32 Vin with voltage divider after guidance| Worked |Verify stable readings before integration |
+| 14 apr` | Initial LED strip mapping was incorrect (wrong orientation) | Technical | Corrected code and recalculated LED positions| Worked| Test with small prototype again|
+| 14th apr | LED strips behaving as one continuous strip instead of separate sections | Technical | Modified code logic to handle strips correctly | Partly | Further refine mapping logic |
+| 17th apr | LEDs flickering and showing random colors when all strips connected | Technical | Checked wiring, power distribution, and consulted for explanation| Failed | Simplify setup and test in smaller batches |
+| 18th apr | System unstable with full number of LED strips | Technical |Tried different ESP32, rechecked connections | Failed | Reduce number of strips |
+| 18th apr| New ESP32 not working properly | Technical | Tested with peers and confirmed it was faulty | Worked (diagnosis) | Switch back to original ESP32 |
+| 18th apr |Power issues when connecting more than 10 strips | Technical | Gradually added strips (2, 4, 6, 10) and tested | Partly | Limit system to 10 strips |
+| 18th apr | General instability due to wiring and power distribution | Technical | Rebuilt connections multiple times and improved wiring approach | Worked | Final testing with stable setup |
+| 19th apr | Buttons not working properly on same ESP32 setup | Technical | Added second ESP32 and connected both together | Failed (second ESP32 got damaged) | Return to single ESP32 with safer wiring |
+
 
 ## 16.4 Playtesting Notes
 
 | Tester | What They Did | What Confused Them | What They Enjoyed | What You Will Change |
 |---|---|---|---|---|
-| `[Peer / friend / classmate]` | `[Observation]` | `[Observation]` | `[Observation]` | `[Action]` |
-| `[Peer / friend / classmate]` | `[Observation]` | `[Observation]` | `[Observation]` | `[Action]` |
+| Ashitha | Moved in front of the wall and tried interacting with lights | Could not understand where the sensor was and how tracking works` | `[Action]` |
+| Anish |Observed the installation and explored the interaction | Was unsure what the buttons do | `Felt the project had potential and said more could be done with it | Make button functions clearer and expand the interaction possibilities` |
 
 ---
 
@@ -741,7 +750,14 @@ Include:
 - revisions.
 
 **Response:**  
-`[Write here]`
+The structure was made using foam board as the base because it is lightweight and easy to work with. The foam board was cut to the required size to form the wall. Black sheets were then added on top to improve the visual depth and make the LED lights stand out more clearly.
+
+The NeoPixel strips were measured, cut, and arranged vertically on the board. They were fixed in place and then wired together carefully using jumper wires and additional red and black wires for power distribution.
+
+The ultrasonic sensor was mounted on a servo at the top of the structure, ensuring it could scan across the full width. All components were connected to the ESP32, and wiring was adjusted multiple times during testing to fix issues with power and signal stability.
+
+Several revisions were made during the build, especially in wiring and number of LED strips, to achieve a stable and working system.
+
 
 ## 17.2 Build Photos
 Add photos throughout the project.
@@ -765,9 +781,9 @@ Example:
 
 | Version | Date | What Changed | Why |
 |---|---|---|---|
-| `v1` | `[Date]` | `[Describe]` | `[Reason]` |
-| `v2` | `[Date]` | `[Describe]` | `[Reason]` |
-| `v3` | `[Date]` | `[Describe]` | `[Reason]` |
+| `v1` | 13–14 April | Initial working prototype with servo, ultrasonic sensor, and small number of LED strips | To test core idea and basic interaction` |
+| `v2` | 17–18 April | Attempted full-scale setup with all LED strips, multiple wiring changes, and power adjustments |To scale up installation and achieve full wall effect |
+| `v3` | 18–19 April | Reduced to 10 LED strips, fixed wiring, added voltage divider, stabilized system, attempted button integration | To ensure stable performance after failures with full setup |
 
 ---
 
@@ -777,17 +793,19 @@ Example:
 Describe the final version of your project.
 
 **Response:**  
-`[Write here]`
+The final project is an interactive LED wall made using 10 NeoPixel strips arranged vertically on a foam board structure. An ultrasonic sensor mounted on a servo scans left to right and detects movement in front of the wall. Based on this, corresponding sections of the LED strips light up in real time, creating a responsive visual effect.
+
+The system also includes buttons that trigger animated pixel art patterns for exactly 10 seconds, after which the system returns to the default motion-based interaction. The setup runs using an ESP32 with proper power management through a buck regulator and stable wiring.
 
 ## 18.2 What Works Well
-- `[Point 1]`
-- `[Point 2]`
-- `[Point 3]`
+Real-time motion tracking and LED response feels immediate and engaging
+Stable performance with 10 LED strips after resolving power issues
+Button-triggered animations add variation to the interaction
 
 ## 18.3 What Still Needs Improvement
-- `[Point 1]`
-- `[Point 2]`
-- `[Point 3]`
+Power system can be improved to support more LED strips
+Sensor tracking can be more precise and smoother
+Better finishing and cleaner wiring for a more polished look
 
 ## 18.4 What Changed From the Original Plan
 How did the project change from the initial idea?
@@ -805,7 +823,14 @@ What slowed you down?
 How well did you manage time, tasks, and responsibilities?
 
 **Response:**  
-`[Write here]`
+The final project is an interactive LED wall made using 10 NeoPixel strips arranged vertically on a foam board structure. An ultrasonic sensor mounted on a servo scans left to right and detects movement in front of the wall. Based on this, corresponding sections of the LED strips light up in real time, creating a responsive visual effect. The system also includes buttons that trigger animated pixel art patterns for exactly 10 seconds, after which it returns to the default motion-based interaction. The setup runs using an ESP32 with power managed through a buck regulator and stable wiring.
+
+What works well is that the motion tracking and LED response feel immediate and engaging. The system is stable with 10 LED strips after resolving earlier power issues. The button-triggered animations also add variation and make the interaction more interesting.
+
+What still needs improvement is the power system, which currently limits the number of LED strips. The sensor tracking can be smoother and more accurate, and the overall finishing, especially wiring, can be cleaner for a more polished output.
+
+Compared to the original plan, the project was scaled down from 15 LED strips to 10 due to power and stability issues. There were multiple changes in wiring, power distribution, and components to make the system work reliably. The button-based interaction was also added later to enhance the experience, which was not part of the initial idea.
+
 
 ## 19.2 Technical Reflection
 What did you learn about:
@@ -816,7 +841,16 @@ What did you learn about:
 - integration?
 
 **Response:**  
-`[Write here]`
+We learned that electronics requires a clear understanding of basics like voltage, current, and power, and we often had to apply 12th grade physics concepts while working on this project. It is important to always double check voltage and current before connecting components, as small mistakes can damage parts.
+
+In coding, we learned how to map sensor input to outputs and handle multiple components together, along with debugging logic when things do not work as expected.
+
+For mechanisms, we understood how to control precise movement using a servo and how physical positioning affects sensor accuracy.
+
+In fabrication, we learned how to build a stable structure using simple materials and how proper placement of components affects the final result.
+
+In integration, the biggest learning was that combining everything is the hardest part. Power distribution, wiring, and coordination between components need careful planning. We also learned to always keep spare components and handle everything carefully to avoid failures.
+
 
 ## 19.3 Design Reflection
 What did you learn about:
@@ -828,13 +862,25 @@ What did you learn about:
 - iteration?
 
 **Response:**  
-`[Write here]`
+This project helped us understand that designing for play is more about creating something that invites interaction naturally rather than forcing it. The wall works because people can just walk by and it responds, which makes it easy to approach without instructions. That simplicity is what creates curiosity and pulls people in.
+
+We also learned that delight comes from immediate feedback. When the lights react instantly to movement, it feels satisfying and keeps people engaged. Small additions like changing patterns or animations make a big difference in keeping the experience interesting.
+
+Clarity is important, especially in interactive systems. If users do not understand what is happening, they lose interest. We saw this when people were confused about where the sensor was or what the buttons did, which showed us that making interactions more visible or intuitive is important.
+
+Physical interaction plays a big role because the experience depends on how people move. Different movements create different outputs, which makes it feel more personal and interactive.
+
+Player understanding comes from observation more than explanation. If someone else uses it and understands it quickly, the design works. If not, something needs to be improved.
+
+Iteration was the biggest part of the process. Almost nothing worked perfectly the first time. We had to keep testing, failing, and changing both the technical setup and the interaction design until it started working properly.
 
 ## 19.4 If You Had One More Week
 What would you improve next?
 
 **Response:**  
-`[Write here]`
+With more time, we would improve the power system to support more LED strips and scale the installation closer to the original plan. We would also explore adding simple games and interactive modes, since people suggested ideas like turning it into something similar to slither.io or Mario Kart style visuals.
+
+Additionally, we would experiment with using the wall for different simulations, like a fireplace effect or other ambient visuals, to expand how it can be used beyond just interaction.
 
 ---
 
