@@ -266,7 +266,6 @@ There is no app interaction; the system works as a standalone installation.
 Add an early sketch of the full idea.
 
 **Insert image below:**  
-<img width="718" height="1280" alt="image" src="https://github.com/user-attachments/assets/a7e2f53f-be3a-426b-8e95-7ce8cb4622e8" />
 <img width="750" height="1280" alt="image" src="https://github.com/user-attachments/assets/d6fc76b1-9955-4ccf-b8fc-ec2c70f358b9" />
 
 
@@ -284,16 +283,16 @@ Add a sketch with labels showing:
 - output elements.
 
 **Insert image below:**  
-`[Upload image and link here]`
+<img width="718" height="1280" alt="image" src="https://github.com/user-attachments/assets/a7e2f53f-be3a-426b-8e95-7ce8cb4622e8" />
 
 ## 7.3 Approximate Dimensions
 
 | Dimension | Value |
 |---|---|
-| Length | `[Write here]` |
-| Width | `[Write here]` |
-| Height | `[Write here]` |
-| Estimated weight | `[Write here]` |
+| Length | NA |
+| Width | 1meter |
+| Height | 1/2 meter |
+| Estimated weight |1-1.5kg |
 
 ---
 
@@ -313,7 +312,7 @@ Check all that apply.
 - [ ] Wheels
 - [ ] Sliders
 - [ ] Levers
-- [ ] Not applicable
+- [✅] Not applicable
 
 ## 8.2 Mechanical Description
 Describe the mechanism and what it is meant to do.
@@ -330,7 +329,11 @@ If something moves, explain:
 - what could go wrong.
 
 **Response:**  
-`[Write here]`
+The ultrasonic sensor mounted on the servo motor moves horizontally from left to right.
+The servo motor is controlled by the ESP32, which sends signals to rotate it continuously within a set angle range.
+It sweeps approximately 0 to 180 degrees, covering the full width of the LED wall.'
+It moves at a moderate, controlled speed so the sensor can accurately detect positions without skipping data
+Servo jitter due to unstable power, incorrect angle calibration, loose mounting affecting accuracy, or delayed sensor readings causing mismatch between position and LED output.
 
 ## 8.4 Simulation / CAD / Animation Before Making
 If your project includes mechanical motion, document the digital planning before fabrication.
@@ -339,13 +342,13 @@ If your project includes mechanical motion, document the digital planning before
 |---|---|---|
 | `[Fusion 360 / Tinkercad / other]` | `[Link or screenshot]` | `[What did you validate?]` |
 | `[Tool]` | `[Link or screenshot]` | `[What did you validate?]` |
+NA
 
 ## 8.5 Changes After Digital Testing
 What changed after the CAD, animation, or simulation stage?
 
 **Response:**  
-`[Write here]`
-
+NA
 ---
 
 # 9. Electronics Planning
@@ -354,9 +357,14 @@ What changed after the CAD, animation, or simulation stage?
 
 | Component | Quantity | Purpose |
 |---|---:|---|
-| `[ESP32]` | `1` | `[Main controller]` |
-| `[Component]` | `[Qty]` | `[Purpose]` |
-| `[Component]` | `[Qty]` | `[Purpose]` |
+| ESP32 | 2 | Main controller for processing inputs and controlling outputs |
+| NeoPixel LED Strips` | 10 | Visual output to display movement-based lighting  |
+| Servo Motor | 1 |Rotates the ultrasonic sensor for scanning |
+| Push Buttons | 2–3 | Triggers different animated pixel art modes |
+| LM2596 Buck Regulator` | 1| Steps down voltage from power supply to safe levels` |
+| Resistors (Voltage Divider) | 2 | Reduces echo pin voltage for ESP32 safety |
+| 12V Power Adapter | 1 | Provides power to the system |
+|Breadboard and Jumper Wires| Multiple| Circuit connections and prototyping
 
 ## 9.2 Wiring Plan
 Describe the main electrical connections.
