@@ -889,11 +889,8 @@ Suggested images:
 - final build.
 
 Example:
-```md
 
 
-
-```
 
 ## 17.3 Version History
 
