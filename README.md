@@ -879,6 +879,8 @@ Several revisions were made during the build, especially in wiring and number of
 
 ## 17.2 Build Photos
 Add photos throughout the project.
+https://github.com/navyaajn/ODT2026-ProjectManagementTemplate/tree/23a3ffe67f0e991c4241778473b0247e3c42e48d/images
+
 
 Suggested images:
 - early sketch,
@@ -924,9 +926,6 @@ Better finishing and cleaner wiring for a more polished look
 
 ## 18.4 What Changed From the Original Plan
 How did the project change from the initial idea?
-
-**Response:**  
-`[Write here]`
 
 ---
 
