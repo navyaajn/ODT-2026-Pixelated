@@ -257,7 +257,6 @@ There is no app interaction; the system works as a standalone installation.
 - |NeoPixel LED Strips | Output | Lights up corresponding sections and displays animations based on input |
 - |Servo Motor | Output | Rotates the ultrasonic sensor left to right for continuous scanning |'
 - |LM2596 Buck Regulator | Power Management | Steps down voltage from the power adapter to safely supply required voltage to LEDs     and components
-- 
 
 ---
 
@@ -385,7 +384,9 @@ Five push buttons are connected to GPIO pins 32, 33, 26, 27, and 14. Each button
 Insert a hand-drawn or software-made circuit diagram.
 
 **Insert image below:**  
-`[Upload image and link here]`
+(https://app.cirkitdesigner.com/project/3e5981b6-d7fe-40d7-a713-8aec581a3cb6)
+<img width="3000" height="2730" alt="circuit_image" src="https://github.com/user-attachments/assets/5afd9705-92ab-43c4-a8c1-e9bf3197bbd1" />
+
 
 ## 9.4 Power Plan
 
@@ -404,7 +405,6 @@ Insert a hand-drawn or software-made circuit diagram.
 
 | Tool / Platform | Purpose |
 |---|---|
-| `[MicroPython / Arduino / MIT App Inventor / CAD tool / other]` | `[Purpose]` |
 | MicroPython Thonny IDE	 | Programming the ESP32 to control sensor input, servo movement, and LED output Writing, uploading, and debugging MicroPython code on the ESP32 |
 
 ## 10.2 Software Logic
@@ -1005,24 +1005,24 @@ Additionally, we would experiment with using the wall for different simulations,
 # 20. Final Submission Checklist
 
 Before submission, confirm that:
-- [ ] Team details are complete
-- [ ] Project description is complete
-- [ ] Inspiration sources are included
-- [ ] Player journey is written
-- [ ] Sketches are added
-- [ ] BOM is complete
-- [ ] Purchase list is complete
-- [ ] Budget summary is complete
-- [ ] Mechanical planning is documented if applicable
-- [ ] App planning is documented if applicable
-- [ ] Code flowchart is added
-- [ ] Task breakdown is complete
-- [ ] Weekly logs are updated
-- [ ] Risk register is complete
-- [ ] Testing log is updated
-- [ ] Playtesting notes are included
-- [ ] Build photos are included
-- [ ] Final reflection is written
+- [✅ ] Team details are complete
+- [ ✅] Project description is complete
+- [ ✅] Inspiration sources are included
+- [✅ ] Player journey is written
+- [✅ ] Sketches are added
+- [✅ ] BOM is complete
+- [✅ ] Purchase list is complete
+- [✅ ] Budget summary is complete
+- [ ✅] Mechanical planning is documented if applicable
+- [ ✅] App planning is documented if applicable
+- [✅ ] Code flowchart is added
+- [✅ ] Task breakdown is complete
+- [✅ ] Weekly logs are updated
+- [✅ ] Risk register is complete
+- [✅ ] Testing log is updated
+- [✅ ] Playtesting notes are included
+- [✅ ] Build photos are included
+- [✅ ] Final reflection is written
 
 ---
 
