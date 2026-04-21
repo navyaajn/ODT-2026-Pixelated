@@ -58,8 +58,8 @@ Pixelated
 
 | Name | Primary Role | Secondary Role | Strengths Brought to the Project |
 |---|---|---|---|
-| Navyaa Jain | Fabrication/ Debugging | Technical Support| Hands-on building, soldering, assembly, troubleshooting hardware issues, identifying faults during integration, system integration, Snacks provider, emotional support, hypnosis code, Visruta and Navyaa code, video maker |
-| Visruta Varma | Electronics / Coding / Circuit Design / Fabrication / Mechanics | Aesthetics | Circuit design, ESP32 programming, visual design decisions, translating concept into interactive output, crashout randomly |
+| Navyaa Jain | Fabrication/ Debugging | Technical Support| Hands-on building, soldering, assembly, troubleshooting hardware issues, identifying faults during integration, system integration |
+| Visruta Varma | Electronics / Coding / Circuit Design / Fabrication / Mechanics | Aesthetics | Circuit design, ESP32 programming, visual design decisions, translating concept into interactive output |
 
 ## 1.3 Project Title
 600 Pixels
